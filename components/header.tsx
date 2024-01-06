@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative">
+    <nav className="sticky top-0 z-[999]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Website Logo */}
@@ -72,6 +72,7 @@ export default function Header() {
             <Link
               href={link.hash}
               className="block py-2 px-4 text-sm hover:bg-indigo-200"
+              onClick={() => setIsOpen(!isOpen)}
             >
               {link.name}
             </Link>
