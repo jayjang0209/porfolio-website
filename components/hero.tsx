@@ -1,4 +1,9 @@
 import React from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+import { IoOpenOutline } from "react-icons/io5";
+import { GithubLink, LinkedInLink, ResumeLink } from "@/lib/data";
 
 import MainProfileImg from "@/public/imgs/jj_profile_main.png";
 import Link from "next/link";
@@ -12,7 +17,7 @@ export default function Hero() {
             alt="Profile"
             className="mx-auto aspect-content overflow-hidden rounded-xl object-center lg:w-[80%] lg:order-last lg:aspect-square"
             width={160}
-            src='./imgs/profile_mono.png'
+            src="./imgs/profile_mono.png"
           />
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
@@ -20,9 +25,44 @@ export default function Hero() {
                 Hello, I'm <span className="text-primary">Jay</span>
               </h1>
               <p className="max-w-[600px] text-zinc-500 md:text-xl dark:text-zinc-400">
-              A recent tech grad with intern experience, seeking a full-time
-              role to innovate and excel in software development
+                A recent tech grad with intern experiences, seeking a full-time
+                role to innovate and excel in software development
               </p>
+            </div>
+            <div className="flex flex-row items-center justify-start gap-2 text-lg font-medium">
+              <Link
+                className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300"
+                href="#"
+              >
+                Contact Me
+                <HiArrowNarrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+              </Link>
+
+              <a
+                className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50  shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none"
+                href={ResumeLink}
+                target="_blank"
+              >
+                Open Resume
+                <IoOpenOutline className="opacity-60  group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+              </a>
+            </div>
+            <div className="flex items-center justify-start gap-2">
+              <a
+                className="bg-white text-gray-700 flex items-center text-[1.8rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                href={LinkedInLink}
+                target="_blank"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                className="bg-white text-gray-700 flex items-center text-[1.8rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                href={GithubLink}
+                target="_blank"
+              >
+                <FaGithubSquare />
+              </a>
             </div>
           </div>
         </div>
