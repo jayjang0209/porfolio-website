@@ -7,9 +7,11 @@ import { links } from "@/lib/data";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const activeSection = "Experience";
+
   return (
     <nav className="sticky top-0 z-[999]">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 bg-white bg-opacity-50 backdrop-blur-[0.5rem]">
         <div className="flex justify-between items-center">
           {/* Website Logo */}
           <a href="#" className="flex items-center py-4 px-2 gap-1">
@@ -27,13 +29,10 @@ export default function Header() {
                 >
                   {link.name}
 
-                  {/* <span className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">
-                    {link.name}
-                  </span> */}
-
-                  {/* <span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                  ></span> */}
+                  {/* Active Indicator */}
+                  {link.name === activeSection && (
+                    <span className="w-[80%] mx-auto border-b-3 bottom-2 absolute inset-0 -z-10 border-indigo-500 opacity-80 dark:bg-gray-800"></span>
+                  )}
                 </Link>
               </li>
             ))}

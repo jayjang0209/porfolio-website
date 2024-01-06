@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        3: '3px',
+      },
     },
   },
   plugins: [],
