@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="gradient" />
+        <div className='main'>
+          <div className="gradient" />
+        </div>
 
         <Header />
         {children}
