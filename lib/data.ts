@@ -25,17 +25,6 @@ export const links = [
   },
 ] as const;
 
-export const socials = [
-  {
-    name: "Github",
-    url: "https://github.com/jayjang0209",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/jayjjang/",
-  },
-  {
-    name: "Resume",
-    url: "https://docs.google.com/document/d/11i0lw4HE6NbtCFTDUtpj5ZYzCPeOjGT88Q2_l7ZrxUM/edit?usp=sharing",
-  },
-] as const;
+export const GithubLink = "https://github.com/jayjang0209"
+export const LinkedInLink = "https://www.linkedin.com/in/jayjjang/"
+export const ResumeLink = "https://docs.google.com/document/d/11i0lw4HE6NbtCFTDUtpj5ZYzCPeOjGT88Q2_l7ZrxUM/edit?usp=sharing"
