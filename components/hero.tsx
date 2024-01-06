@@ -19,7 +19,7 @@ export default function Hero() {
             width={160}
             src="./imgs/profile_mono.png"
           />
-          <div className="flex flex-col justify-center space-y-4">
+          <div className="flex flex-col justify-center space-y-4 ml-3">
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Hello, I'm <span className="text-primary">Jay</span>
