@@ -50,7 +50,7 @@ export default function Project({
             )}
           </div>
 
-          <p className="mt-2 leading-relaxed text-zinc-600">{description}</p>
+          <p className="mt-2 leading-relaxed text-zinc-500">{description}</p>
 
           <ul className="flex flex-row flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map((tag, index) => (
