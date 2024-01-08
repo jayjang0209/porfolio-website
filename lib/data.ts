@@ -45,6 +45,9 @@ export const projectsData = [
       "Migrating a business website from Django to React, created a Golang and AWS-based data ingestion pipeline for easy database updates, and setup AWS infrastructure for the backend",
     tags: ["React", "Go", "AWS", "TypeScript", "Serverless Framework", "Django", "DynamoDB"],
     imageUrl: sqrImg,
+    github: "",
+    demo: "",
+    video: "",
   },
   {
     title: "Mobile App for Avesdo Technologies Inc.",
@@ -52,6 +55,9 @@ export const projectsData = [
       "A mobile app for Avesdo Technologies Inc(5-week sprint project), as part of BCIT Industry Sponsored Student Project",
     tags: ["React Native", "TypeScript"],
     imageUrl: avesdoImg,
+    github: "",
+    demo: "",
+    video: "",
   },
   {
     title: "Eventgen for SAP Hackathon",
@@ -59,6 +65,9 @@ export const projectsData = [
       "A web app for generating social events automatically based on the interests of SAP employees, built a Serverless RESTful API",
     tags: ["Python", "React", "Serverless framework", "JavaScript", "AWS"],
     imageUrl: evengenImg,
+    github: "",
+    demo: "",
+    video: "",
   },
   {
     title: "PlanA",
