@@ -5,6 +5,7 @@ import evengenImg from "@/public/imgs/evengen.png";
 import planaImg from "@/public/imgs/plana.png";
 import churnImg from "@/public/imgs/ChurnDetector.png";
 import codeImg from "@/public/imgs/code.jpg";
+import vikingImg from "@/public/imgs/viking.png";
 
 export const links = [
   {
@@ -45,9 +46,9 @@ export const projectsData = [
       "Migrating a business website from Django to React, created a Golang and AWS-based data ingestion pipeline for easy database updates, and setup AWS infrastructure for the backend",
     tags: ["React", "Go", "AWS", "TypeScript", "Serverless Framework", "Django", "DynamoDB"],
     imageUrl: sqrImg,
-    github: "",
-    demo: "",
-    video: "",
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "Mobile App for Avesdo Technologies Inc.",
@@ -55,9 +56,9 @@ export const projectsData = [
       "A mobile app for Avesdo Technologies Inc(5-week sprint project), as part of BCIT Industry Sponsored Student Project",
     tags: ["React Native", "TypeScript"],
     imageUrl: avesdoImg,
-    github: "",
-    demo: "",
-    video: "",
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "Eventgen for SAP Hackathon",
@@ -65,9 +66,9 @@ export const projectsData = [
       "A web app for generating social events automatically based on the interests of SAP employees, built a Serverless RESTful API",
     tags: ["Python", "React", "Serverless framework", "JavaScript", "AWS"],
     imageUrl: evengenImg,
-    github: "",
-    demo: "",
-    video: "",
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "PlanA",
@@ -75,6 +76,9 @@ export const projectsData = [
       "A android app for planning a road trip with EV, imtegrated with Google Maps API",
     tags: ["Java", "Google Maps API", "Firebase", "Android Studio"],
     imageUrl: planaImg,
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "ChurnDetect",
@@ -82,6 +86,9 @@ export const projectsData = [
       "A Django for predicting bank customer churn rate, trained and built a MLP classifier model with scikit-learn",
     tags: ["Django", "Python", "scikit-learn"],
     imageUrl: churnImg,
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "Automated Web Scraper",
@@ -89,12 +96,48 @@ export const projectsData = [
       "Automated servelress data ETL pipeline for scraping data from a website and storing it in a database on a schedule basis, built a RESTful",
     tags: ["Python", "AWS Lambda", "DdynamoDB", "AWS EventBridge"],
     imageUrl: codeImg,
+    github: "test",
+    demo: "test",
+    video: "test",
   },
   {
     title: "Viking",
     description:
       "A mobile-friendly web app for displaying the real-time availability of bike lockers/parkades in Vancouver",
     tags: ["JavaScript", "HTML", "CSS", "Node.js", "Google Maps API", "Firebase"],
-    imageUrl: codeImg,
+    imageUrl: vikingImg,
   },
+] as const;
+
+export const skillsData = [
+  "Python",
+  "Go",
+  "Java",
+  "C",
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Vue",
+  "React Native",
+  "Django",
+  "NestJS",
+  "Node.js",
+  "Express",
+  "HTML",
+  "CSS",
+  "SQL",
+  "R",
+  "AWS",
+  "Azure",
+  "Alicloud",
+  "Linux",
+  "Docker",
+  "Bash",
+  "Terraform",
+  "Ansible",
+  "Jenkins",
+  "Servelss Framework",
+  "Packer",
+  "Grafana",
 ] as const;
