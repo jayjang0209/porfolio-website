@@ -1,7 +1,7 @@
 
-import sqrImg from "@/public/imgs/sqr.jpg";
+import sqrImg from "@/public/imgs/sqr.png";
 import avesdoImg from "@/public/imgs/avesdo.png";
-import evengenImg from "@/public/imgs/eventgen.png";
+import evengenImg from "@/public/imgs/evengen.png";
 import planaImg from "@/public/imgs/plana.png";
 import churnImg from "@/public/imgs/ChurnDetector.png";
 import codeImg from "@/public/imgs/code.jpg";
