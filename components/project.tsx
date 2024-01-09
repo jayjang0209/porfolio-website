@@ -24,7 +24,7 @@ export default function Project({
     offset: ["0 1", "1.3 1"],
   });
 
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
