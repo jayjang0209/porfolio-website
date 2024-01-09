@@ -18,7 +18,7 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true}}
+      viewport={{ once: true }}
     >
       <SectionHeading>Contact</SectionHeading>
       <p className="text-lg text-zinc-500 dark:text-zinc-400">
@@ -33,7 +33,12 @@ export default function Contact() {
         or this form!
       </p>
 
-      <form className="mt-10 flex flex-col gap-4">
+      <form
+        className="mt-10 flex flex-col gap-4"
+        action={async (formData) => {
+          console.log(formData);
+        }}
+      >
         <input
           className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50"
           name="senderEmail"
@@ -49,11 +54,11 @@ export default function Contact() {
           required
           maxLength={5000}
         />
+        <button className="group inline-flex h-10 items-center justify-center rounded-md bg-indigo-600 px-4 w-32 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950">
+          Contact Me
+          <IoIosSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+        </button>
       </form>
-      <button className="group inline-flex h-10 mt-4 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
-        Contact Me
-        <IoIosSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
-      </button>
     </motion.section>
   );
 }
