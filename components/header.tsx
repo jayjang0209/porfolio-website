@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -36,7 +37,16 @@ export default function Header() {
 
                   {/* Active Indicator */}
                   {link.name === activeSection && (
-                    <span className="w-[80%] mx-auto border-b-3 bottom-2 absolute inset-0 -z-10 border-indigo-500 opacity-80 dark:bg-gray-800"></span>
+                    <motion.span
+                      layoutId="activeSection"
+                      initial={false}
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 30,
+                      }}
+                      className="w-[80%] mx-auto border-b-3 bottom-2 absolute inset-0 -z-10 border-indigo-500 opacity-80 dark:bg-gray-800"
+                    ></motion.span>
                   )}
                 </Link>
               </li>
