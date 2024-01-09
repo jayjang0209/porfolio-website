@@ -45,6 +45,10 @@ html {
   --line-color: #e5e7eb;
 }
 
+.indigo_gradient {
+  @apply bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent;
+}
+
 /* Add this to your CSS file */
 .work-experience-hover {
   transition: transform 0.3s ease, background-color 0.3s ease;
