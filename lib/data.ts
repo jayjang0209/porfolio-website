@@ -10,6 +10,7 @@ import vikingImg from "@/public/imgs/viking.png";
 
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
+import { SiSap } from "react-icons/si";
 
 export const links = [
   {
@@ -161,7 +162,7 @@ export const skillsData = [
   "Grafana",
 ] as const;
 
-export const experienceData = [
+export const experiencesData = [
   {
     type: "School",
     title: "Computer Systems Technology Diploma",
@@ -238,7 +239,7 @@ export const experienceData = [
         "Updated an administration tool for SAP HANA systems on Linux systems using Ansible",
       ],
     },
-    icon: React.createElement(MdOutlineWorkOutline),
+    icon: React.createElement(SiSap),
     date: "Jan 2022 - Aug 2022",
   },
 ] as const;
