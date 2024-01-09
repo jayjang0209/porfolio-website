@@ -17,7 +17,7 @@ export default function Project({
 }: ProjectProps) {
   return (
     <div className="group mb-3 sm:mb-8 last:mb-0">
-      <section className="relative bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer">
+      <section className="relative rounded-xl bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer">
         <div className="flex flex-col h-full pt-3 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%]">
           <h3 className="flex text-2xl font-semibold text-zinc-800">{title}</h3>
           <div className="flex items-center justify-start gap-2 mt-1 mb-1">
