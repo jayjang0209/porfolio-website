@@ -29,6 +29,7 @@ export default function Experience() {
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+              className={item.type === "Work" ? "work-experience-hover" : ""}
               visible={true}
               contentStyle={{
                 background: "#fff",
