@@ -1,7 +1,8 @@
 "use server";
-
+import { createElement } from "react";
 import { Resend } from "resend";
 import { EmailLink } from "@/lib/data";
+import ContactFormEmail from "@/email/contact-form-email"
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -45,7 +46,10 @@ export const sendEmail = (formData: FormData) => {
       to: EmailLink,
       subject: "Mesaage from Portfolio Site",
       reply_to: senderEmail as string,
-      html: `<p>${message}</p>`,
+      react: createElement(ContactFormEmail, {
+        message: message as string,
+        senderEmail: senderEmail as string,
+      }),
     });
   } catch (error: unknown) {
     return getErrorMesssage(error);
