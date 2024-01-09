@@ -77,10 +77,16 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <ul
+      <motion.ul
         className={`absolute top-full left-0 w-full bg-white z-50 bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:hidden ${
           isOpen ? "block" : "hidden"
         } text-right `}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          y: isOpen ? 0 : -20
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         {links.map((link) => (
           <li key={link.hash} className="">
@@ -99,7 +105,7 @@ export default function Header() {
             </Link>
           </li>
         ))}
-      </ul>
+      </motion.ul>
     </nav>
   );
 }
