@@ -6,7 +6,7 @@ import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 
-const projectNumberToShow = 3;
+const projectNumberToShow = 4;
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.15);
