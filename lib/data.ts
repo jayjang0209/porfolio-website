@@ -85,21 +85,21 @@ export const projectsData = [
     video: "test",
   },
   {
-    title: "PlanA",
-    description:
-      "A android app for planning a road trip with EV, imtegrated with Google Maps API",
-    tags: ["Java", "Google Maps API", "Firebase", "Android Studio"],
-    imageUrl: planaImg,
-    github: "test",
-    demo: "test",
-    video: "test",
-  },
-  {
     title: "ChurnDetect",
     description:
       "A Django for predicting bank customer churn rate, trained and built a MLP classifier model with scikit-learn",
     tags: ["Django", "Python", "scikit-learn"],
     imageUrl: churnImg,
+    github: "test",
+    demo: "test",
+    video: "test",
+  },
+  {
+    title: "PlanA",
+    description:
+      "A android app for planning a road trip with EV, imtegrated with Google Maps API",
+    tags: ["Java", "Google Maps API", "Firebase", "Android Studio"],
+    imageUrl: planaImg,
     github: "test",
     demo: "test",
     video: "test",
