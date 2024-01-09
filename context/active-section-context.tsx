@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useState, useContext, createContext } from "react";
 import type { SectionName } from "@/types/data/SectionName";
 import type { ActiveSectionContextProviderProps } from "@/types/context/ActiveSectionContextProviderProps";
 import type { ActiveSectionContextType } from "@/types/context/ActiveSectionContextType";
 
 export const ActiveSectionContext =
-  React.createContext<ActiveSectionContextType | null>(null);
+  createContext<ActiveSectionContextType | null>(null);
 export const defaultActiveSection = "Home";
 
 export default function ActiveSectionContextProvider({
