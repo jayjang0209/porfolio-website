@@ -16,8 +16,6 @@ export function useSectionInView(sectionName: SectionName, threshold = defaultTh
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > defaultDelay) {
-      console.log("inView:", inView);
-      console.log("setting active section", sectionName);
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection, timeOfLastClick, sectionName]);
