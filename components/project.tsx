@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { RiPagesLine } from "react-icons/ri";
 import { motion, useScroll, useTransform } from "framer-motion";
+import YoutubeModal from "@/components/youtube-modal";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -18,6 +19,10 @@ export default function Project({
   demo,
   video,
 }: ProjectProps) {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const toggleShowVideo = () => setShowVideo(!showVideo);
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,9 +62,8 @@ export default function Project({
             )}
             {video && (
               <a
+                onClick={toggleShowVideo}
                 className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                href={video}
-                target="_blank"
               >
                 <FaYoutube />
               </a>
@@ -88,6 +92,7 @@ export default function Project({
           transition group-hover:scale-[1.03] group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2"
         />
       </section>
+      {showVideo && <YoutubeModal videoUrl={video} onClose={() => setShowVideo(false)} />}
     </motion.div>
   );
 }
