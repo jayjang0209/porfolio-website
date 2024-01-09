@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { links } from "@/lib/data";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   const [isOpen, setIsOpen] = useState(false);
-
-  const activeSection = "Experience";
 
   return (
     <nav className="sticky top-0 z-[999]">
@@ -26,6 +27,10 @@ export default function Header() {
                 <Link
                   href={link.hash}
                   className="flex w-full items-center justify-center px-3 py-3 hover:text-indigo-600 transition dark:text-gray-500 dark:hover:text-gray-300"
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
                 >
                   {link.name}
 
