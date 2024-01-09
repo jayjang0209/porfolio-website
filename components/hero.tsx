@@ -1,14 +1,22 @@
+"use client";
+
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoOpenOutline } from "react-icons/io5";
 import { GithubLink, LinkedInLink, ResumeLink } from "@/lib/data";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 import Link from "next/link";
 
 export default function Hero() {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
-    <section className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]" id="home">
+    <section
+      className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]"
+      id="home"
+    >
       <div className="container mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <img
@@ -30,7 +38,11 @@ export default function Hero() {
             <div className="flex flex-row items-center justify-start gap-2 text-lg font-medium">
               <Link
                 className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300"
-                href="#"
+                href="#contact"
+                onClick={() => {
+                  setActiveSection("Contact");
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 Contact Me
                 <HiArrowNarrowRight className="opacity-70 group-hover:translate-x-1 transition" />
