@@ -24,7 +24,10 @@ export default function Project({
   const [showVideo, setShowVideo] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
-  const toggleShowVideo = () => setShowVideo(!showVideo);
+  const toggleShowVideo = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setShowVideo(!showVideo);
+  }
   const toggleShowDetails = () => setShowDetails(!showDetails);
 
   const ref = useRef<HTMLDivElement>(null);
