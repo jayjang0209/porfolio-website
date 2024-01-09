@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,9 +8,19 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import ExperienceModal from "./experience-modal";
+import type { ExperienceData } from "@/types/data/ExperienceData";
 
 export default function Experience() {
+  const [selectedExperience, setSelectedExperience] =
+    useState<ExperienceData | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
   const { ref } = useSectionInView("Experience", 0.25);
+
+  const openDetailsModal = (experience: ExperienceData) => {
+    setSelectedExperience(experience);
+    setShowDetails(true);
+  };
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
@@ -35,6 +45,9 @@ export default function Experience() {
                 background: "#e5e7eb",
                 fontSize: "1.5rem",
               }}
+              onTimelineElementClick={() =>
+                item.type === "Work" && openDetailsModal(item)
+              }
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.place}</p>
@@ -46,7 +59,7 @@ export default function Experience() {
                 <ul className="flex flex-row flex-wrap gap-2 mt-6 sm:mt-auto">
                   {item.details.skills.map((skill, index) => (
                     <li
-                      className="px-2 py-1 text-[0.7rem] tracking-wider uppercase font-semibold text-zinc-800 bg-indigo-300 rounded-full"
+                      className="px-2 py-1 text-[0.7rem] tracking-wider uppercase font-semibold text-white bg-indigo-500/90 rounded-lg"
                       key={index}
                     >
                       {skill}
@@ -58,6 +71,15 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+      {selectedExperience && (
+        <ExperienceModal
+          experience={selectedExperience}
+          onClose={() => {
+            setShowDetails(false);
+            setSelectedExperience(null);
+          }}
+        />
+      )}
     </section>
   );
 }
