@@ -7,6 +7,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/section-heading";
 import { sendEmail } from "@/actions/sendEmail";
+import SubmitBtn from "@/components/submit-button";
 
 
 export default function Contact() {
@@ -35,10 +36,7 @@ export default function Contact() {
         or this form!
       </p>
 
-      <form
-        className="mt-10 flex flex-col gap-4"
-        action={sendEmail}
-      >
+      <form className="mt-10 flex flex-col gap-4" action={sendEmail}>
         <input
           className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50"
           name="senderEmail"
@@ -54,10 +52,7 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <button className="group inline-flex gap-2 h-10 items-center justify-center rounded-lg bg-indigo-600 px-4 w-36 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950">
-          Contact Me
-          <IoIosSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
-        </button>
+        <SubmitBtn />
       </form>
     </motion.section>
   );
