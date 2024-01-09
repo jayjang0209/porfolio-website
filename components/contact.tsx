@@ -1,5 +1,6 @@
 import React from "react";
 import { EmailLink } from "@/lib/data";
+import { IoIosSend } from "react-icons/io";
 
 export default function Contact() {
   return (
@@ -20,7 +21,27 @@ export default function Contact() {
         or this form!
       </p>
 
-      <form className="mt-10 flex flex-col gap-4"></form>
+      <form className="mt-10 flex flex-col gap-4">
+        <input
+          className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50"
+          name="senderEmail"
+          type="email"
+          required
+          maxLength={500}
+          placeholder="Your email"
+        />
+        <textarea
+          className="h-52 my-3 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 p-4 transition-all dark:outline-none"
+          name="message"
+          placeholder="Your message"
+          required
+          maxLength={5000}
+        />
+      </form>
+      <button className="group inline-flex h-10 mt-4 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+        Contact Me
+        <IoIosSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+      </button>
     </section>
   );
 }
