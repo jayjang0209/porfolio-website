@@ -6,6 +6,8 @@ import { IoIosSend } from "react-icons/io";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/section-heading";
+import { sendEmail } from "@/actions/sendEmail";
+
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -35,9 +37,7 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col gap-4"
-        action={async (formData) => {
-          console.log(formData);
-        }}
+        action={sendEmail}
       >
         <input
           className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50"
