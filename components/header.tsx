@@ -86,7 +86,11 @@ export default function Header() {
             <Link
               href={link.hash}
               className="block py-2 px-4 text-sm hover:bg-indigo-200"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setActiveSection(link.name);
+                setTimeOfLastClick(Date.now());
+                setIsOpen(false);
+              }}
             >
               {link.name}
             </Link>
