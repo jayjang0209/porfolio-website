@@ -5,6 +5,7 @@ import { EmailLink } from "@/lib/data";
 import { IoIosSend } from "react-icons/io";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import SectionHeading from "@/components/section-heading";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -19,7 +20,7 @@ export default function Contact() {
       transition={{ duration: 0.5 }}
       viewport={{ once: true}}
     >
-      <h1 className="text-4xl font-bold mb-5 text-center">Contact Me</h1>
+      <SectionHeading>Contact</SectionHeading>
       <p className="text-lg text-zinc-500 dark:text-zinc-400">
         I'm currently looking for full-time opportunities in software
         development. Feel free to reach out to me via{" "}

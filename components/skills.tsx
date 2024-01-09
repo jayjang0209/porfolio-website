@@ -4,6 +4,7 @@ import React from "react";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import SectionHeading from "@/components/section-heading";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -28,7 +29,7 @@ export default function Skills() {
       id="skills"
       ref={ref}
     >
-      <h1 className="text-4xl font-bold mb-5 text-center">Skills</h1>
+      <SectionHeading>Skills</SectionHeading>
       <ul className="flex flex-wrap items-center justify-center gap-5">
         {skillsData.map((skill, index) => (
           <motion.li

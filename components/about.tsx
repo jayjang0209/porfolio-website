@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import SectionHeading from "@/components/section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
@@ -16,7 +17,7 @@ export default function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 }}
     >
-      <h1 className="text-4xl font-bold mb-5">About Me</h1>
+      <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
         Greetings! I'm Jay, a fresh-faced tech graduate from the British
         Columbia Institute of Technology with a passion for software innovation

@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Hello, 
-                I'm <span className="">Jay</span>
+                I'm <span className="indigo_gradient">Jay</span>
               </h1>
               <div className="text-indigo-600 tracking-tighter ">
                 <TypeAnimation

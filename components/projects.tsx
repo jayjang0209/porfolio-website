@@ -3,9 +3,10 @@
 import React, { useState, useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
+import SectionHeading from "@/components/section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import { AnimatePresence, m, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const projectNumberToShow = 4;
 
@@ -35,7 +36,7 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <h1 className="text-4xl font-bold mb-5 text-center">My Projects</h1>
+      <SectionHeading>Projects</SectionHeading>
       {displayedProjects.map((project, index) => (
         <motion.div
           key={index}
