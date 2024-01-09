@@ -39,18 +39,18 @@ export default function Projects() {
         {!showAll ? (
           <button
             ref={moreButtonRef}
-            className="mt-2 text-md bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600 transition
+            className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-5 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950
             scroll-mt-80"
             onClick={toggleShowAll}
           >
-            More <MdExpandMore className="inline-block text-2xl" />
+            More <MdExpandMore className="text-2xl group-hover:translate-y-1 transition" />
           </button>
         ) : (
           <button
-            className="mt-2 text-md bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600 transition"
+            className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-5 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950"
             onClick={toggleShowAll}
           >
-            Less <MdExpandLess className="inline-block text-2xl" />
+            Less <MdExpandLess className="inline-block text-2xl group-hover:-translate-y-1 transition" />
           </button>
         )}
       </div>
