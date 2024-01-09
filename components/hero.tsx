@@ -1,16 +1,14 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
 import { IoOpenOutline } from "react-icons/io5";
 import { GithubLink, LinkedInLink, ResumeLink } from "@/lib/data";
 
-import MainProfileImg from "@/public/imgs/jj_profile_main.png";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl w-full py-12 md:py-24 lg:py-32">
+    <section className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]" id="home">
       <div className="container mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <img
@@ -47,6 +45,7 @@ export default function Hero() {
                 <IoOpenOutline className="opacity-60  group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
               </a>
             </div>
+
             <div className="flex items-center justify-start gap-2">
               <a
                 className="bg-white text-gray-700 flex items-center text-[1.8rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
