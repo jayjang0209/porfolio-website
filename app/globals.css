@@ -40,3 +40,7 @@
   padding: 120px 24px 160px 24px;
   pointer-events: none;
 }
+
+html {
+  --line-color: #e5e7eb;
+}
