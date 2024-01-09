@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -85,7 +86,9 @@ export default function Header() {
           <li key={link.hash} className="">
             <Link
               href={link.hash}
-              className="block py-2 px-4 text-sm hover:bg-indigo-200"
+              className={clsx("block py-2 px-4 text-md hover:bg-indigo-200", {
+                "text-indigo-600": link.name === activeSection,
+              })}
               onClick={() => {
                 setActiveSection(link.name);
                 setTimeOfLastClick(Date.now());
