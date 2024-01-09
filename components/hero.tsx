@@ -7,6 +7,7 @@ import { IoOpenOutline } from "react-icons/io5";
 import { GithubLink, LinkedInLink, ResumeLink } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
+import { TypeAnimation } from "react-type-animation";
 
 import Link from "next/link";
 
@@ -31,8 +32,25 @@ export default function Hero() {
           <div className="flex flex-col justify-center space-y-4 ml-3">
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Hello, I'm <span className="text-primary">Jay</span>
+                Hello, 
+                I'm <span className="">Jay</span>
               </h1>
+              <div className="text-indigo-600 tracking-tighter ">
+                <TypeAnimation
+                  preRenderFirstString={true}
+                  sequence={[
+                    500,
+                    "A Software Developer", // initially rendered starting point
+                    500,
+                    "A Cloud Inovator",
+                    500,
+                    "A Lifelong Learner"
+                  ]}
+                  speed={50}
+                  style={{ fontSize: "1.8em", fontWeight: "bold" }}
+                  repeat={Infinity}
+                />
+              </div>
               <p className="max-w-[600px] text-zinc-500 md:text-xl dark:text-zinc-400">
                 A recent tech grad with intern experiences, seeking a full-time
                 role to innovate and excel in software development
