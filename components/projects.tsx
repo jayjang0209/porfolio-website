@@ -57,7 +57,7 @@ export default function Projects() {
             scroll-mt-80"
             onClick={toggleShowAll}
           >
-            More{" "}
+            More{` (${projectsData.length - projectNumberToShow})`}
             <MdExpandMore className="text-2xl group-hover:translate-y-1 transition" />
           </button>
         ) : (
