@@ -1,4 +1,4 @@
-import React, {useState, useContext, createContext} from "react";
+import React, { useState, useContext, createContext } from "react";
 import type { SectionName } from "@/types/data/SectionName";
 import type { ActiveSectionContextProviderProps } from "@/types/context/ActiveSectionContextProviderProps";
 import type { ActiveSectionContextType } from "@/types/context/ActiveSectionContextType";
@@ -14,9 +14,19 @@ export default function ActiveSectionContextProvider({
     useState<SectionName>(defaultActiveSection);
   const [timeOfLastClick, setTimeOfLastClick] = useState<number>(0);
 
-  return <div>active-section-context</div>;
+  return (
+    <ActiveSectionContext.Provider
+      value={{
+        activeSection,
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick,
+      }}
+    >
+      {children}
+    </ActiveSectionContext.Provider>
+  );
 }
-
 
 export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
@@ -27,6 +37,3 @@ export function useActiveSectionContext() {
   }
   return context;
 }
-
-
-
