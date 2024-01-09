@@ -1,9 +1,9 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { FaGithub, FaExternalLinkAlt, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
 import { RiPagesLine } from "react-icons/ri";
 
 type ProjectProps = (typeof projectsData)[number];

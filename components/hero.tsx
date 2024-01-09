@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoOpenOutline } from "react-icons/io5";
@@ -21,7 +22,12 @@ export default function Hero() {
       className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]"
       id="home"
     >
-      <div className="container mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.05 }}
+      
+      className="container mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <img
             alt="Profile"
@@ -98,7 +104,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

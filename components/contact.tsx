@@ -4,15 +4,20 @@ import React from "react";
 import { EmailLink } from "@/lib/data";
 import { IoIosSend } from "react-icons/io";
 import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
   return (
-    <section
+    <motion.section
       ref={ref}
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true}}
     >
       <h1 className="text-4xl font-bold mb-5 text-center">Contact Me</h1>
       <p className="text-lg text-zinc-500 dark:text-zinc-400">
@@ -48,6 +53,6 @@ export default function Contact() {
         Contact Me
         <IoIosSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
       </button>
-    </section>
+    </motion.section>
   );
 }
