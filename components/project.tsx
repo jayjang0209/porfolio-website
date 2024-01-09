@@ -1,10 +1,11 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { RiPagesLine } from "react-icons/ri";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -17,8 +18,21 @@ export default function Project({
   demo,
   video,
 }: ProjectProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.3 1"],
+  });
+
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div className="group mb-3 sm:mb-8 last:mb-0">
+    <motion.div 
+      ref={ref}
+      style={{ scale: scaleProgess, opacity: opacityProgess }}
+    
+    className="group mb-3 sm:mb-8 last:mb-0">
       <section className="relative rounded-xl bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer">
         <div className="flex flex-col h-full pt-3 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%]">
           <h3 className="flex text-2xl font-semibold text-zinc-800">{title}</h3>
@@ -74,6 +88,6 @@ export default function Project({
           transition group-hover:scale-[1.03] group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2"
         />
       </section>
-    </div>
+    </motion.div>
   );
 }
