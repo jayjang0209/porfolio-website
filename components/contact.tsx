@@ -1,10 +1,16 @@
+"use client";
+
 import React from "react";
 import { EmailLink } from "@/lib/data";
 import { IoIosSend } from "react-icons/io";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Contact() {
+  const { ref } = useSectionInView("Contact");
+
   return (
     <section
+      ref={ref}
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >

@@ -6,14 +6,17 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoOpenOutline } from "react-icons/io5";
 import { GithubLink, LinkedInLink, ResumeLink } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 import Link from "next/link";
 
 export default function Hero() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section
+      ref={ref}
       className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]"
       id="home"
     >

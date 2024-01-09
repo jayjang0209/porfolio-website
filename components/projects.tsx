@@ -3,10 +3,13 @@
 import React from "react";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
+  const { ref } = useSectionInView("Projects", 0.15);
+
   return (
-    <section id="projects" className="scroll-mt-28 mb-28">
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <h1 className="text-4xl font-bold mb-5 text-center">My Projects</h1>
       <div>
         {projectsData.map((project, index) => (
