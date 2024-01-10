@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Styles */
 
 .gradient {
   height: fit-content;
@@ -40,8 +41,6 @@
 html {
   --line-color: #c7d2fe;
 }
-
-
 
 .work-experience-hover {
   transition: transform 0.3s ease, background-color 0.3s ease;
