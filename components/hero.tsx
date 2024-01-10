@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import profileImg from "@/public/imgs/profile_mono.png";
 import { motion } from "framer-motion";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
@@ -31,11 +33,13 @@ export default function Hero() {
         className="container mx-auto"
       >
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_500px]">
-          <img
+          <Image
             alt="Profile"
             className="mx-auto aspect-content overflow-hidden rounded-xl object-center lg:w-[80%] lg:order-last lg:aspect-square"
             width={160}
-            src="./imgs/profile_mono.png"
+            height={160}
+            quality={95}
+            src={profileImg}
           />
 
           {/* text and buttons */}
