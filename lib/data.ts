@@ -40,11 +40,12 @@ export const links = [
 ] as const;
 
 export const GithubLink = "https://github.com/jayjang0209";
-export const PortfolioGihuLink = "https://github.com/jayjang0209/porfolio-website"
+export const PortfolioGihuLink =
+  "https://github.com/jayjang0209/porfolio-website";
 export const LinkedInLink = "https://www.linkedin.com/in/jayjjang/";
 export const ResumeLink =
   "https://docs.google.com/document/d/11i0lw4HE6NbtCFTDUtpj5ZYzCPeOjGT88Q2_l7ZrxUM/edit?usp=sharing";
-export const EmailLink = "jayjang0209@gmail.com"
+export const EmailLink = "jayjang0209@gmail.com";
 
 export const projectsData = [
   {
@@ -64,12 +65,12 @@ export const projectsData = [
       "Migrating the local real estate business website from Django to React, enhancing performance and user interface",
       "Developed a data ingestion pipeline using Go & AWS to streamline the process for the client to effectively update database",
       "Led database design for scalability and configured the project’s infrastructure on AWS using Serverless framework",
-      "Implemented a RESTful API for the backend using Go, AWS Lambda, API Gateway, and DynamoDB"
+      "Implemented a RESTful API for the backend using Go, AWS Lambda, API Gateway, and DynamoDB",
     ],
     imageUrl: sqrImg,
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "",
+    demo: "",
+    video: "",
   },
   {
     title: "Mobile App for Avesdo Technologies Inc.",
@@ -83,9 +84,9 @@ export const projectsData = [
       "Collaborated with a team of 5 to develop the app and ensure the quality of the product",
     ],
     imageUrl: avesdoImg,
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "",
+    demo: "",
+    video: "",
   },
   {
     title: "Eventgen for SAP Hackathon",
@@ -98,9 +99,9 @@ export const projectsData = [
       "Implemented automation for creating customized social events and sending invitations utilizing Amazon EventBridge & SES",
       "Built a RESTful API for the backend using Python, AWS Lambda, API Gateway, and DynamoDB",
     ],
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "https://github.com/jayjang0209/GrowTeamSpirit-Hacktahon-backend",
+    demo: "",
+    video: "",
   },
   {
     title: "ChurnDetect",
@@ -114,9 +115,9 @@ export const projectsData = [
       "Improved the model's performance to 86% accuracy using GridSearchCV to tune hyperparameters",
     ],
     imageUrl: churnImg,
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "https://github.com/jayjang0209/BankCustomerChurnPrediction",
+    demo: "",
+    video: "https://youtu.be/xFMkTjfg4oc",
   },
   {
     title: "PlanA",
@@ -129,9 +130,9 @@ export const projectsData = [
       "Integrated Google Maps API to display the route and charging stations along the way",
       "Implemented user authentication and data storage using Firebase",
     ],
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "https://github.com/jayjang0209/mobile-PlanA",
+    demo: "",
+    video: "",
   },
   {
     title: "Automated Web Scraper",
@@ -144,9 +145,9 @@ export const projectsData = [
       "Developed a RESTful API for the backend using Python, AWS Lambda, API Gateway, and DynamoDB",
     ],
     imageUrl: codeImg,
-    github: "test",
-    demo: "test",
-    video: "test",
+    github: "https://github.com/jayjang0209/automated_web_scraper_etl",
+    demo: "",
+    video: "",
   },
   {
     title: "Viking",
@@ -166,8 +167,8 @@ export const projectsData = [
       "Integrated customized Google Maps API to display the location and availability of bike lockers/parkades",
     ],
     imageUrl: vikingImg,
-    github: "test",
-    demo: "test",
+    github: "",
+    demo: "https://viking-eaee3.web.app/",
     video: "https://www.youtube.com/embed/qbOxSivrS_A",
   },
 ] as const;
@@ -248,7 +249,8 @@ export const experiencesData = [
     type: "School",
     title: "Graduated from BCIT",
     place: "BCIT",
-    description: "Completed a Diploma in Computer Systems Technology at BCIT with Predictive Analytics Option",
+    description:
+      "Completed a Diploma in Computer Systems Technology at BCIT with Predictive Analytics Option",
     details: null,
     icon: React.createElement(FaUserGraduate),
     date: "May 2023",
