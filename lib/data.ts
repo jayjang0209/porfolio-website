@@ -283,6 +283,6 @@ export const experiencesData = [
       ],
     },
     icon: React.createElement(SiSap),
-    date: "Jan 2022 - Aug 2022",
+    date: "May 2023 - Dec 2023",
   },
 ] as const;
