@@ -18,7 +18,7 @@ export default function ExperienceModal({
           <h4 className="text-xl font-semibold text-zinc-800 mt-2 dark:text-slate-300">{date}</h4>
 
           {/* Skills */}
-          <div className="flex flex-wrap gap-2 mt-3">
+          <div className="flex flex-wrap gap-2 mt-3 uppercase tracking-wider">
             {details?.skills?.map((skill, index) => (
               <span
                 key={index}
