@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="flex flex-col justify-center space-y-4 ml-3">
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Hello, I'm <span className="indigo_gradient">Jay</span>
+                Hello, I&apos;m <span className="indigo_gradient">Jay</span>
               </h1>
               <div className="text-indigo-600 tracking-tighter ">
                 <TypeAnimation

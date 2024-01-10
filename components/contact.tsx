@@ -24,7 +24,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact</SectionHeading>
       <p className="text-lg text-zinc-500 dark:text-zinc-400">
-        I'm currently looking for full-time opportunities in software
+        I&apos;m currently looking for full-time opportunities in software
         development. Feel free to reach out to me via{" "}
         <a
           className="text-primary underline text-indigo-900 hover:text-fuchsia-900 dark:text-fuchsia-500"

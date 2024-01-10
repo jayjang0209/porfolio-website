@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        Greetings! I'm <span className="highlight">Jay</span>, a fresh-faced
+        Greetings! I&apos; <span className="highlight">Jay</span>, a fresh-faced
         tech graduate from the
         <span className="highlight">
           {" "}
@@ -39,7 +39,7 @@ export default function About() {
         role, where I crafted sophisticated web scrapers, APIs, and user
         interfaces from the ground up.
         <br />
-        I'm now seeking a <span className="emphasis">
+        I&apos;m now seeking a <span className="emphasis">
           full-time position
         </span>{" "}
         where I can apply my diverse skill set in a dynamic and innovative
