@@ -30,7 +30,9 @@ export default function Project({
   };
   const toggleShowDetails = () => setShowDetails(!showDetails);
 
-  {/* scroll animation*/}
+  {
+    /* scroll animation*/
+  }
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -85,14 +87,11 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-zinc-500 dark:text-white/70">
             {description}
           </p>
-            
+
           {/* tags */}
           <ul className="flex flex-row flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map((tag, index) => (
-              <li
-                className="tag_secondary"
-                key={index}
-              >
+              <li className="tag_secondary" key={index}>
                 {tag}
               </li>
             ))}

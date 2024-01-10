@@ -2,7 +2,6 @@
 
 import React from "react";
 import { EmailLink } from "@/lib/data";
-import { IoIosSend } from "react-icons/io";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/section-heading";
@@ -39,14 +38,16 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col gap-4"
         action={async (formData) => {
-          const response = await sendEmail(formData) as { error: string } | null;
+          const response = (await sendEmail(formData)) as {
+            error: string;
+          } | null;
           const error = response?.error;
           if (error) {
-            toast.error(error)
+            toast.error(error);
             return;
           }
 
-          toast.success("Message sent successfully!")
+          toast.success("Message sent successfully!");
         }}
       >
         <input

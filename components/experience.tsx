@@ -37,22 +37,22 @@ export default function Experience() {
               visible={true}
               contentStyle={{
                 background:
-                theme === "light" ? "#fff" : "rgba(255, 255, 255, 0.05)",
+                  theme === "light" ? "#fff" : "rgba(255, 255, 255, 0.05)",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: 
-                theme === "light"
-                ? "0.4rem solid #9ca3af"
-                : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: 
-                theme === "light" ? "white" : "rgba(255, 255, 255, 1)",
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 1)",
                 color: "black",
                 fontSize: "1.5rem",
               }}
@@ -69,10 +69,7 @@ export default function Experience() {
               {item.details?.skills && (
                 <ul className="flex flex-row flex-wrap gap-2 mt-6 sm:mt-auto">
                   {item.details.skills.map((skill, index) => (
-                    <li
-                      className="tag_primary"
-                      key={index}
-                    >
+                    <li className="tag_primary" key={index}>
                       {skill}
                     </li>
                   ))}

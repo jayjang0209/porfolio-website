@@ -20,10 +20,7 @@ export default function ProjectModal({
             {/* Skill Tags */}
             <div className="flex flex-wrap gap-2 mt-1 mb-1">
               {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="mt-3 tag_secondary"
-                >
+                <span key={tag} className="mt-3 tag_secondary">
                   {tag}
                 </span>
               ))}
@@ -35,10 +32,7 @@ export default function ProjectModal({
             {/* Tasks */}
             <ul className="mt-4 sm:mt-auto list-none pl-0">
               {tasks.map((task, index) => (
-                <li
-                  key={index}
-                  className="task_primary"
-                >
+                <li key={index} className="task_primary">
                   • {task}
                 </li>
               ))}
