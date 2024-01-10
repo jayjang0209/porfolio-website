@@ -66,6 +66,7 @@ export default function Experience() {
                 {item.description}
               </p>
 
+              {/* Skills tag */}
               {item.details?.skills && (
                 <ul className="flex flex-row flex-wrap gap-2 mt-6 sm:mt-auto">
                   {item.details.skills.map((skill, index) => (
@@ -79,6 +80,8 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+
+      {/* Experience Details Modal */}
       {selectedExperience && (
         <ExperienceModal
           experience={selectedExperience}
