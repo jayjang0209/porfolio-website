@@ -27,15 +27,15 @@ export default function Project({
   const toggleShowVideo = (e: React.MouseEvent) => {
     e.stopPropagation();
     setShowVideo(!showVideo);
-  }
+  };
   const toggleShowDetails = () => setShowDetails(!showDetails);
 
+  {/* scroll animation*/}
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.3 1"],
   });
-
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
@@ -50,7 +50,9 @@ export default function Project({
         className="relative rounded-xl bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
       >
         <div className="flex flex-col h-full pt-3 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%]">
-          <h3 className="flex text-2xl font-semibold text-zinc-800 dark:text-slate-100">{title}</h3>
+          <h3 className="flex text-2xl font-semibold text-zinc-800 dark:text-slate-100">
+            {title}
+          </h3>
           <div className="flex items-center justify-start gap-2 mt-1 mb-1">
             {github && (
               <a
@@ -80,12 +82,15 @@ export default function Project({
             )}
           </div>
 
-          <p className="mt-2 leading-relaxed text-zinc-500 dark:text-white/70">{description}</p>
-
+          <p className="mt-2 leading-relaxed text-zinc-500 dark:text-white/70">
+            {description}
+          </p>
+            
+          {/* tags */}
           <ul className="flex flex-row flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="px-2 py-1 text-[0.6rem] tracking-widest uppercase font-semibold text-white bg-zinc-500/70 rounded-md"
+                className="tag_secondary"
                 key={index}
               >
                 {tag}
@@ -101,6 +106,8 @@ export default function Project({
           className="absolute hidden sm:block top-8 -right-5 w-[15rem] rounded-xl shadow-2xl
           transition group-hover:scale-[1.03] group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2"
         />
+
+        {/* Project details modal */}
         {showDetails && (
           <ProjectModal
             title={title}
@@ -111,6 +118,8 @@ export default function Project({
           />
         )}
       </section>
+
+      {/* video modal */}
       {showVideo && (
         <YoutubeModal videoUrl={video} onClose={() => setShowVideo(false)} />
       )}
