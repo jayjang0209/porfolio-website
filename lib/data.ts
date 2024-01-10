@@ -40,6 +40,7 @@ export const links = [
 ] as const;
 
 export const GithubLink = "https://github.com/jayjang0209";
+export const PortfolioGihuLink = "https://github.com/jayjang0209/porfolio-website"
 export const LinkedInLink = "https://www.linkedin.com/in/jayjjang/";
 export const ResumeLink =
   "https://docs.google.com/document/d/11i0lw4HE6NbtCFTDUtpj5ZYzCPeOjGT88Q2_l7ZrxUM/edit?usp=sharing";
