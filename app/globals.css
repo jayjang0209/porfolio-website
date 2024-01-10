@@ -45,9 +45,6 @@ html {
   --line-color: #c7d2fe;
 }
 
-.indigo_gradient {
-  @apply bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent;
-}
 
 /* Add this to your CSS file */
 .work-experience-hover {
@@ -57,4 +54,17 @@ html {
 
 .work-experience-hover:hover {
   transform: scale(1.05); 
+}
+
+
+.indigo_gradient {
+  @apply bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent;
+}
+
+.highlight {
+  @apply text-indigo-600 font-bold;
+}
+
+.emphasis {
+  @apply text-white bg-fuchsia-400/90 px-1 py-0.5 rounded; 
 }
