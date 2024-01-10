@@ -47,14 +47,14 @@ export default function Project({
     >
       <section
         onClick={toggleShowDetails}
-        className="relative rounded-xl bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer"
+        className="relative rounded-xl bg-gray-50 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[21rem] hover:bg-gray-200 transition cursor-pointer dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
       >
         <div className="flex flex-col h-full pt-3 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%]">
-          <h3 className="flex text-2xl font-semibold text-zinc-800">{title}</h3>
+          <h3 className="flex text-2xl font-semibold text-zinc-800 dark:text-slate-100">{title}</h3>
           <div className="flex items-center justify-start gap-2 mt-1 mb-1">
             {github && (
               <a
-                className="text-gray-300 inlin items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-indigo-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
+                className="text-gray-300 inlin items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-indigo-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-slate-100"
                 href={github}
                 target="_blank"
               >
@@ -63,7 +63,7 @@ export default function Project({
             )}
             {demo && (
               <a
-                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
+                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-slate-100"
                 href={demo}
                 target="_blank"
               >
@@ -73,14 +73,14 @@ export default function Project({
             {video && (
               <a
                 onClick={toggleShowVideo}
-                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
+                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-slate-100"
               >
                 <FaYoutube />
               </a>
             )}
           </div>
 
-          <p className="mt-2 leading-relaxed text-zinc-500">{description}</p>
+          <p className="mt-2 leading-relaxed text-zinc-500 dark:text-white/70">{description}</p>
 
           <ul className="flex flex-row flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map((tag, index) => (
