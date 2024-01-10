@@ -2,10 +2,12 @@ import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import ActiveSectionContextProvider from '@/context/active-section-context'
+import ThemeContextProvider from "@/context/theme-context";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from "react-hot-toast";
 import WidgetSwitch from '@/components/widget-switch'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,14 +31,16 @@ export default function RootLayout({
         </div>
 
         {/* content */}
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
 
-          <Toaster position='bottom-right' />
-          <WidgetSwitch />
-        </ActiveSectionContextProvider>
+            <Toaster position='bottom-right' />
+            <WidgetSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   )

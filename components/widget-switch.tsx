@@ -4,36 +4,10 @@ import React, { useState, useEffect } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { PortfolioGihuLink } from "@/lib/data";
+import { useTheme } from "@/context/theme-context";
 
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    if (localTheme) {
-      setTheme(localTheme);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-    } else {
-      window.localStorage.setItem("theme", "light");
-    }
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="flex flex-col fixed bottom-5 right-5 gap-2">
