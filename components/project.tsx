@@ -54,7 +54,7 @@ export default function Project({
           <div className="flex items-center justify-start gap-2 mt-1 mb-1">
             {github && (
               <a
-                className="text-gray-300 inlin items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-indigo-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className="text-gray-300 inlin items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-indigo-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
                 href={github}
                 target="_blank"
               >
@@ -63,7 +63,7 @@ export default function Project({
             )}
             {demo && (
               <a
-                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
                 href={demo}
                 target="_blank"
               >
@@ -73,7 +73,7 @@ export default function Project({
             {video && (
               <a
                 onClick={toggleShowVideo}
-                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className="text-gray-400 flex items-center text-[1.2rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-900"
               >
                 <FaYoutube />
               </a>
