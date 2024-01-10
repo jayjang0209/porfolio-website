@@ -7,9 +7,9 @@ export default function Footer() {
         &copy; 2024 Jay Jang. All rights reserved.
       </p>
       <p className='text-xs text-center'>
-        Built with <a className="text-primary underline" href="https://nextjs.org/">Next.js</a>{" "},
-        <a className="text-primary underline" href="https://www.typescriptlang.org/">TypeScript</a>{" "},
-         <a className="text-primary underline" href="https://tailwindcss.com/">Tailwind CSS</a>,
+        Built with <a className="text-primary underline" href="https://nextjs.org/">Next.js</a>,{" "}
+        <a className="text-primary underline" href="https://www.typescriptlang.org/">TypeScript</a>,{" "}
+         <a className="text-primary underline" href="https://tailwindcss.com/">Tailwind CSS</a>,{" "}
           <a className="text-primary underline" href="https://www.framer.com/motion/">Framer Motion</a>,
           and hosted on <a className="text-primary underline" href="https://vercel.com/">Vercel</a>.
       </p>
