@@ -2,7 +2,7 @@
 import { createElement } from "react";
 import { Resend } from "resend";
 import { EmailLink } from "@/lib/data";
-import ContactFormEmail from "@/email/contact-form-email"
+import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -23,8 +23,9 @@ const getErrorMesssage = (error: unknown) => {
   } else {
     return "Unknown error";
   }
-}
+};
 
+// handle the form submission and send the email
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
@@ -54,7 +55,7 @@ export const sendEmail = async (formData: FormData) => {
   } catch (error: unknown) {
     return {
       error: getErrorMesssage(error),
-    }
+    };
   }
 
   return null;

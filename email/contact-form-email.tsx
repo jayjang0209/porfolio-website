@@ -13,6 +13,7 @@ import {
 import { Tailwind } from "@react-email/tailwind";
 import type { ConstactFormEmailPropsType } from "@/types/email/ContactFormEmailPropsType";
 
+// Email template for contact form
 export default function ContactFormEmail({
   senderEmail,
   message,

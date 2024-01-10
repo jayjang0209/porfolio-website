@@ -7,6 +7,7 @@ import type { ThemeContextProviderProps } from "@/types/context/ThemeContextProv
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
+// Context provider for theme["light", "dark"]
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {

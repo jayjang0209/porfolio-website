@@ -9,6 +9,7 @@ export const ActiveSectionContext =
   createContext<ActiveSectionContextType | null>(null);
 export const defaultActiveSection = "Home";
 
+// Context provider for active section
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
