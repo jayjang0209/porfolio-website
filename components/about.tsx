@@ -37,11 +37,13 @@ export default function About() {
         <span className="highlight"> IOTO</span>, I embraced the{" "}
         <span className="emphasis">full-stack developer</span>
         role, where I crafted sophisticated web scrapers, APIs, and user
-        interfaces from the ground up. 
+        interfaces from the ground up.
         <br />
-        I'm now seeking a{" "}
-        <span className="emphasis">full-time position</span> where I can apply
-        my diverse skill set in a dynamic and innovative environment.
+        I'm now seeking a <span className="emphasis">
+          full-time position
+        </span>{" "}
+        where I can apply my diverse skill set in a dynamic and innovative
+        environment.
       </p>
     </motion.section>
   );
