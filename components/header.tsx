@@ -14,11 +14,11 @@ export default function Header() {
 
   return (
     <nav className="sticky top-0 z-[999]">
-      <div className="max-w-6xl mx-auto px-4 bg-white bg-opacity-50 backdrop-blur-[0.5rem]">
+      <div className="max-w-6xl mx-auto px-4 bg-white bg-opacity-50 backdrop-blur-[0.5rem] dark:bg-opacity-40 dark:bg-black">
         <div className="flex justify-between items-center">
           {/* Website Logo */}
           <a href="#" className="flex items-center py-4 px-2 gap-1">
-            <span className="font-semibold text-gray-500 text-lg">Jay</span>
+            <span className="font-semibold text-gray-500 text-lg dark:text-slate-100">Jay</span>
             <span className="font-semibold text-indigo-600 text-lg">Jang</span>
           </a>
 
@@ -28,7 +28,7 @@ export default function Header() {
               <li key={link.hash} className="relative">
                 <Link
                   href={link.hash}
-                  className="flex w-full items-center justify-center px-3 py-3 hover:text-indigo-600 transition dark:text-gray-500 dark:hover:text-gray-300"
+                  className="flex w-full items-center justify-center px-3 py-3 hover:text-indigo-600 transition dark:text-slate-100 dark:hover:text-indigo-400"
                   onClick={() => {
                     setActiveSection(link.name);
                     setTimeOfLastClick(Date.now());
@@ -46,7 +46,7 @@ export default function Header() {
                         stiffness: 500,
                         damping: 30,
                       }}
-                      className="w-[80%] mx-auto border-b-3 bottom-2 absolute inset-0 -z-10 border-indigo-500 opacity-80 dark:bg-gray-800"
+                      className="w-[80%] mx-auto border-b-3 bottom-2 absolute inset-0 -z-10 border-indigo-500 opacity-80 dark:opacity-10 dark:border-indigo-400"
                     ></motion.span>
                   )}
                 </Link>
@@ -61,7 +61,7 @@ export default function Header() {
               onClick={() => setIsOpen(!isOpen)}
             >
               <svg
-                className="w-6 h-6 text-gray-500 hover:text-indigo-600"
+                className="w-7 h-7 text-gray-500 hover:text-indigo-600 dark:text-slate-100"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -78,7 +78,9 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <motion.ul
-        className={`absolute top-full left-0 w-full bg-white z-50 bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:hidden ${
+        className={`absolute top-full left-0 w-full bg-white z-50 bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:hidden dark:bg-black dark:bg-opacity-70 dark:shadow-white/[0.03] dark:backdrop-blur-[0.5rem]
+        
+        ${
           isOpen ? "block" : "hidden"
         } text-right `}
         initial={{ opacity: 0, y: -20 }}
@@ -93,7 +95,7 @@ export default function Header() {
             <Link
               href={link.hash}
               className={clsx("block py-2 px-4 text-md hover:bg-indigo-200", {
-                "text-indigo-600": link.name === activeSection,
+                "text-indigo-600 dark:text-indigo-400": link.name === activeSection,
               })}
               onClick={() => {
                 setActiveSection(link.name);
