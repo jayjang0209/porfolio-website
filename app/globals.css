@@ -77,3 +77,7 @@ html {
 .tag_secondary {
   @apply px-2 py-1 text-[0.65rem] tracking-widest uppercase font-semibold text-white bg-zinc-500/70 rounded-md
 }
+
+.task_primary {
+  @apply mb-2 flex items-start text-sm font-medium text-gray-700 bg-fuchsia-200/60 px-3 py-2 rounded-xl relative dark:bg-fuchsia-200/70
+}

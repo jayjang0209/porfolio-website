@@ -31,16 +31,20 @@ export default function ProjectModal({
             <p className="text-s mt-1 mb-3 leading-relaxed text-zinc-500 dark:text-slate-300">
               {description}
             </p>
+
+            {/* Tasks */}
             <ul className="mt-4 sm:mt-auto list-none pl-0">
               {tasks.map((task, index) => (
                 <li
                   key={index}
-                  className="mb-2 flex items-start text-sm font-medium text-gray-700 bg-gray-100 px-3 py-2 rounded-md relative"
+                  className="task_primary"
                 >
                   • {task}
                 </li>
               ))}
             </ul>
+
+            {/* Close Button */}
             <button onClick={onClose} className="mt-3 w-16 btn_primary">
               Close
             </button>
