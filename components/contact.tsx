@@ -27,7 +27,7 @@ export default function Contact() {
         I'm currently looking for full-time opportunities in software
         development. Feel free to reach out to me via{" "}
         <a
-          className="text-primary underline text-indigo-900 dark:text-fuchsia-500"
+          className="text-primary underline text-indigo-900 hover:text-fuchsia-900 dark:text-fuchsia-500"
           href={`mailto:${EmailLink}`}
         >
           jayjang0209@gmail.com
