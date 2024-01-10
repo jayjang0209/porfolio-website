@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <nav className="sticky top-0 z-[999]">
-      <div className="max-w-6xl mx-auto px-4 bg-white bg-opacity-50 backdrop-blur-[0.5rem] dark:bg-opacity-40 dark:bg-black">
+      <div className="mx-auto px-4 bg-white bg-opacity-50 backdrop-blur-[0.5rem] dark:bg-opacity-40 dark:bg-black">
         <div className="flex justify-between items-center">
           {/* Website Logo */}
           <a href="#" className="flex items-center py-4 px-2 gap-1">

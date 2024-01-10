@@ -28,7 +28,7 @@ export default function Contact() {
         I'm currently looking for full-time opportunities in software
         development. Feel free to reach out to me via{" "}
         <a
-          className="text-primary underline text-indigo-900"
+          className="text-primary underline text-indigo-900 dark:text-fuchsia-500"
           href={`mailto:${EmailLink}`}
         >
           jayjang0209@gmail.com
@@ -50,7 +50,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50"
+          className="h-14 px-4 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 transition-all dark:outline-none bg-slate-50 dark:text-zinc-900 "
           name="senderEmail"
           type="email"
           required
@@ -58,7 +58,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 p-4 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg ring-2 ring-zinc-400 border border-indigo-700/10 p-4 transition-all dark:outline-none dark:text-zinc-900"
           name="message"
           placeholder="Your message"
           required
