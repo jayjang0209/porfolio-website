@@ -70,7 +70,7 @@ export default function Experience() {
                 <ul className="flex flex-row flex-wrap gap-2 mt-6 sm:mt-auto">
                   {item.details.skills.map((skill, index) => (
                     <li
-                      className="px-2 py-1 text-[0.7rem] tracking-wider uppercase font-semibold text-white bg-indigo-500/90 rounded-lg"
+                      className="tag_primary"
                       key={index}
                     >
                       {skill}

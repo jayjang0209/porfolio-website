@@ -17,12 +17,12 @@ export default function ExperienceModal({
           <h4 className="text-xl font-semibold text-zinc-800 mt-2 dark:text-slate-300">{place}</h4>
           <h4 className="text-xl font-semibold text-zinc-800 mt-2 dark:text-slate-300">{date}</h4>
 
-          {/* Skills */}
+          {/* Skills tag */}
           <div className="flex flex-wrap gap-2 mt-3 uppercase tracking-wider">
             {details?.skills?.map((skill, index) => (
               <span
                 key={index}
-                className="text-xs text-gray-700 bg-gray-100 px-2 py-1 rounded-md"
+                className="tag_secondary"
               >
                 {skill}
               </span>
