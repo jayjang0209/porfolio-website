@@ -4,6 +4,7 @@ import Footer from '@/components/footer'
 import ActiveSectionContextProvider from '@/context/active-section-context'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,8 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+
+          <Toaster position='bottom-right' />
         </ActiveSectionContextProvider>
       </body>
     </html>
