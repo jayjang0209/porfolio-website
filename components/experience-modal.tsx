@@ -10,12 +10,12 @@ export default function ExperienceModal({
   const { title, place, description, details, date } = experience;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 z-30 flex justify-center items-center p-4">
-      <div className="bg-white rounded-lg shadow-lg overflow-y-auto max-h-[85vh] w-full sm:max-w-[35rem] md:max-w-[45rem]">
+    <div className="fixed inset-0 bg-black bg-opacity-60 z-30 flex justify-center items-center p-4 dark:bg-opacity-100">
+      <div className="bg-white rounded-lg shadow-lg overflow-y-auto max-h-[85vh] w-full sm:max-w-[35rem] md:max-w-[45rem] dark:bg-white/15">
         <div className="px-5 py-5 sm:px-10 sm:py-10">
-          <h3 className="text-2xl font-semibold text-zinc-800">{title}</h3>
-          <h4 className="text-xl font-semibold text-zinc-800 mt-2">{place}</h4>
-          <h4 className="text-xl font-semibold text-zinc-800 mt-2">{date}</h4>
+          <h3 className="text-2xl font-semibold text-zinc-800 dark:text-white">{title}</h3>
+          <h4 className="text-xl font-semibold text-zinc-800 mt-2 dark:text-slate-300">{place}</h4>
+          <h4 className="text-xl font-semibold text-zinc-800 mt-2 dark:text-slate-300">{date}</h4>
 
           {/* Skills */}
           <div className="flex flex-wrap gap-2 mt-3">
@@ -30,7 +30,7 @@ export default function ExperienceModal({
           </div>
 
           {/* Description */}
-          <p className="text-sm mt-3 leading-relaxed text-zinc-500">
+          <p className="text-sm mt-3 leading-relaxed text-zinc-500 dark:text-slate-300">
             {description}
           </p>
 
@@ -49,7 +49,7 @@ export default function ExperienceModal({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="mt-3 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-900/90 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:hover:bg-zinc-50/90 dark:focus:ring-zinc-300"
+            className="mt-3 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-900/90 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:text-zinc-900 dark:bg-white/80 dark:hover:bg-white/20 dark:focus-visible:ring-zinc-300"
           >
             Close
           </button>

@@ -22,7 +22,7 @@ export default function ProjectModal({
 }: ProjectModalProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 z-30 flex justify-center items-center dark:bg-opacity-100">
-      <div className="bg-white max-w-[90%] p-2 rounded-lg shadow-lg sm:w-[35rem] md:w-[45rem] dark:bg-white/30">
+      <div className="bg-white max-w-[90%] p-2 rounded-lg shadow-lg sm:w-[35rem] md:w-[45rem] dark:bg-white/15">
         <div className="flex flex-col sm:flex-row">
           <div className="flex flex-col items-center justify-center"></div>
           <div className="flex flex-col justify-center px-5 sm:px-10 py-5 sm:py-10">
