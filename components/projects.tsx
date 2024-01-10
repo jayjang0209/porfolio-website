@@ -50,7 +50,12 @@ export default function Projects() {
         </motion.div>
       ))}
 
-      <div className="text-center mt-4">
+      <motion.div
+        className="text-center mt-4"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
         {!showAll ? (
           <button
             ref={moreButtonRef}
@@ -70,7 +75,7 @@ export default function Projects() {
             <MdExpandLess className="inline-block text-2xl group-hover:-translate-y-1 transition" />
           </button>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 }
