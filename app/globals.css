@@ -42,7 +42,7 @@ html {
 }
 
 
-/* Add this to your CSS file */
+
 .work-experience-hover {
   transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer; 
@@ -52,6 +52,7 @@ html {
   transform: scale(1.05); 
 }
 
+/* Tailwind Styles */
 
 .indigo_gradient {
   @apply bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent;
@@ -63,4 +64,8 @@ html {
 
 .emphasis {
   @apply text-white bg-fuchsia-400/90 px-1 py-0.5 rounded; 
+}
+
+.btn_primary {
+  @apply inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-400/90 dark:focus-visible:ring-zinc-300
 }

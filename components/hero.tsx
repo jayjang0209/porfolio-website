@@ -15,6 +15,8 @@ import Link from "next/link";
 export default function Hero() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView("Home", 0.5);
+  const typeAnimationDelay = 500;
+  const typeAnimationSpeed = 50;
 
   return (
     <section
@@ -22,12 +24,12 @@ export default function Hero() {
       className="max-w-6xl w-full py-12 md:py-24 lg:py-32 scroll-mt-[80rem]"
       id="home"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
-      
-      className="container mx-auto">
+        className="container mx-auto"
+      >
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <img
             alt="Profile"
@@ -38,21 +40,20 @@ export default function Hero() {
           <div className="flex flex-col justify-center space-y-4 ml-3">
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Hello, 
-                I'm <span className="indigo_gradient">Jay</span>
+                Hello, I'm <span className="indigo_gradient">Jay</span>
               </h1>
               <div className="text-indigo-600 tracking-tighter ">
                 <TypeAnimation
                   preRenderFirstString={true}
                   sequence={[
-                    500,
+                    typeAnimationDelay,
                     "A Software Developer", // initially rendered starting point
-                    500,
+                    typeAnimationDelay,
                     "A Cloud Inovator",
-                    500,
-                    "A Lifelong Learner"
+                    typeAnimationDelay,
+                    "A Lifelong Learner",
                   ]}
-                  speed={50}
+                  speed={typeAnimationSpeed}
                   style={{ fontSize: "1.8em", fontWeight: "bold" }}
                   repeat={Infinity}
                 />
@@ -64,7 +65,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-row items-center justify-start gap-2 text-lg font-medium">
               <Link
-                className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300"
+                className="group btn_primary"
                 href="#contact"
                 onClick={() => {
                   setActiveSection("Contact");
@@ -76,7 +77,7 @@ export default function Hero() {
               </Link>
 
               <a
-                className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50  shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300"
+                className="group btn_primary"
                 href={ResumeLink}
                 target="_blank"
               >

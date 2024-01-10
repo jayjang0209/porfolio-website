@@ -49,7 +49,7 @@ export default function ExperienceModal({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="mt-3 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-900/90 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:text-zinc-900 dark:bg-white/80 dark:hover:bg-white/20 dark:focus-visible:ring-zinc-300"
+            className="btn_primary mt-3"
           >
             Close
           </button>

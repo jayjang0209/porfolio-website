@@ -54,7 +54,7 @@ export default function ProjectModal({
             </ul>
             <button
               onClick={onClose}
-              className="mt-3 w-16 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-indigo-600 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-indigo-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-5 dark:text-zinc-900 dark:bg-white/80 dark:hover:bg-white/20 dark:focus-visible:ring-zinc-300"
+              className="mt-3 w-16 btn_primary"
             >
               Close
             </button>
