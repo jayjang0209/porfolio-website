@@ -1,17 +1,5 @@
 import React from "react";
-import type { ProjectProps } from "@/types/data/ProjectProps";
-import { FaGithub, FaYoutube } from "react-icons/fa";
-import { RiPagesLine } from "react-icons/ri";
-import { StaticImageData } from "next/image";
-
-// modals to show all details of a project
-type ProjectModalProps = {
-  title: string;
-  description: string;
-  tags: readonly string[];
-  tasks: readonly string[];
-  onClose: () => void;
-};
+import type { ProjectModalProps } from "@/types/components/ProjectModalPropsType";
 
 export default function ProjectModal({
   title,
