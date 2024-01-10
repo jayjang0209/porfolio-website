@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-/* 
-  Acknowledgement: inspired by JavaScriptMastery's tutorial on YouTube
-  - all credit to JavaScript Mastery
-*/
 .gradient {
   height: fit-content;
   z-index: 3;
