@@ -15,6 +15,7 @@ export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const moreButtonRef = useRef<HTMLButtonElement>(null);
 
+  // framer motion variants
   const projectVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: { opacity: 1, height: "auto", transition: { duration: 0.5 } },
@@ -30,6 +31,7 @@ export default function Projects() {
     setShowAll(!showAll);
   };
 
+  // show all projects if showAll is true, otherwise show the first 4 projects
   const displayedProjects = showAll
     ? projectsData
     : projectsData.slice(0, projectNumberToShow);
@@ -37,6 +39,8 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>Projects</SectionHeading>
+      
+      {/* Projects */}
       {displayedProjects.map((project, index) => (
         <motion.div
           key={index}
@@ -50,6 +54,7 @@ export default function Projects() {
         </motion.div>
       ))}
 
+      {/* More/Less Button */}
       <motion.div
         className="text-center mt-4"
         initial={{ opacity: 0, y: 100 }}
@@ -66,10 +71,7 @@ export default function Projects() {
             <MdExpandMore className="text-2xl group-hover:translate-y-1 transition" />
           </button>
         ) : (
-          <button
-            className="group btn_primary"
-            onClick={toggleShowAll}
-          >
+          <button className="group btn_primary" onClick={toggleShowAll}>
             Less{" "}
             <MdExpandLess className="inline-block text-2xl group-hover:-translate-y-1 transition" />
           </button>
