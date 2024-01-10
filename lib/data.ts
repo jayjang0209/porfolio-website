@@ -1,12 +1,12 @@
 import React from "react";
 
-import sqrImg from "@/public/imgs/sqr.png";
-import avesdoImg from "@/public/imgs/avesdo.png";
-import evengenImg from "@/public/imgs/evengen.png";
-import planaImg from "@/public/imgs/plana.png";
-import churnImg from "@/public/imgs/ChurnDetector.png";
-import codeImg from "@/public/imgs/code.jpg";
-import vikingImg from "@/public/imgs/viking.png";
+const sqrImg = "/imgs/sqr.png";
+const avesdoImg = "/imgs/avesdo.png";
+const evengenImg = "/imgs/evengen.png";
+const planaImg = "/imgs/plana.png";
+const churnImg = "/imgs/ChurnDetector.png";
+const codeImg = "/imgs/code.jpg";
+const vikingImg = "/imgs/viking.png";
 
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";

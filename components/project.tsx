@@ -100,6 +100,8 @@ export default function Project({
 
         <Image
           alt={title}
+          width={400}
+          height={400}
           quality={95}
           src={imageUrl}
           className="absolute hidden sm:block top-8 -right-5 w-[15rem] rounded-xl shadow-2xl
