@@ -1,6 +1,6 @@
 type ExperienceDetails = {
-  skills: string[];
-  tasks: string[];
+  skills: readonly string[];
+  tasks: readonly string[];
 };
 
 export type ExperienceData = {
