@@ -37,6 +37,8 @@ export default function Hero() {
             width={160}
             src="./imgs/profile_mono.png"
           />
+
+          {/* text and buttons */}
           <div className="flex flex-col justify-center space-y-4 ml-3">
             <div className="space-y-2">
               <h1 className="pt-3 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -63,6 +65,8 @@ export default function Hero() {
                 role to innovate and excel in software development
               </p>
             </div>
+
+            {/* main buttons */}
             <div className="flex flex-row items-center justify-start gap-2 text-lg font-medium">
               <Link
                 className="group btn_primary"
@@ -86,6 +90,7 @@ export default function Hero() {
               </a>
             </div>
 
+            {/* socials */}
             <div className="flex items-center justify-start gap-2">
               <a
                 className="bg-white text-gray-700 flex items-center text-[1.8rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-zinc-50/90"
