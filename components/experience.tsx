@@ -11,12 +11,15 @@ import { useSectionInView } from "@/lib/hooks";
 import ExperienceModal from "./experience-modal";
 import SectionHeading from "@/components/section-heading";
 import type { ExperienceData } from "@/types/data/ExperienceData";
+import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
   const [selectedExperience, setSelectedExperience] =
     useState<ExperienceData | null>(null);
   const [showDetails, setShowDetails] = useState(false);
   const { ref } = useSectionInView("Experience", 0.25);
+
+  const { theme } = useTheme();
 
   const openDetailsModal = (experience: ExperienceData) => {
     setSelectedExperience(experience);
@@ -33,18 +36,24 @@ export default function Experience() {
               className={item.type === "Work" ? "work-experience-hover" : ""}
               visible={true}
               contentStyle={{
-                background: "#fff",
+                background:
+                theme === "light" ? "#fff" : "rgba(255, 255, 255, 0.05)",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3af",
+                borderRight: 
+                theme === "light"
+                ? "0.4rem solid #9ca3af"
+                : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: "#e5e7eb",
+                background: 
+                theme === "light" ? "white" : "rgba(255, 255, 255, 1)",
+                color: "black",
                 fontSize: "1.5rem",
               }}
               onTimelineElementClick={() =>
