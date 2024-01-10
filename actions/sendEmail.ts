@@ -25,7 +25,7 @@ const getErrorMesssage = (error: unknown) => {
   }
 }
 
-export const sendEmail = (formData: FormData) => {
+export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
@@ -41,7 +41,7 @@ export const sendEmail = (formData: FormData) => {
   }
 
   try {
-    resend.emails.send({
+    await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: EmailLink,
       subject: "Mesaage from Portfolio Site",
@@ -52,6 +52,10 @@ export const sendEmail = (formData: FormData) => {
       }),
     });
   } catch (error: unknown) {
-    return getErrorMesssage(error);
+    return {
+      error: getErrorMesssage(error),
+    }
   }
+
+  return null;
 };
