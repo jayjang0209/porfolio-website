@@ -36,8 +36,8 @@ export default function Hero() {
           <Image
             alt="Profile"
             className="mx-auto aspect-content overflow-hidden rounded-xl object-center lg:w-[80%] lg:order-last lg:aspect-square"
-            width={160}
-            height={160}
+            width={400}
+            height={400}
             quality={95}
             src={profileImg}
           />
