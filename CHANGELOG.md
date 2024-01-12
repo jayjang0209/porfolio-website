@@ -1,3 +1,9 @@
+## [1.0.2] - 2024-01-11
+
+### Fixed
+
+- Fix image file name issue.
+
 ## [1.0.1] - 2024-01-10
 
 ### Fixed

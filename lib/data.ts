@@ -3,10 +3,10 @@ import React from "react";
 const sqrImg = "/imgs/sqr.png";
 const avesdoImg = "/imgs/avesdo.png";
 const evengenImg = "/imgs/evengen.png";
-const planaImg = "/imgs/plana.png";
+const planaImg = "/imgs/PlanA.png";
 const churnImg = "/imgs/ChurnDetector.png";
 const codeImg = "/imgs/code.jpg";
-const vikingImg = "/imgs/viking.png";
+const vikingImg = "/imgs/Viking.png";
 
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
