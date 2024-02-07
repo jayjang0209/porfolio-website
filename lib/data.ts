@@ -117,7 +117,7 @@ export const projectsData = [
     imageUrl: churnImg,
     github: "https://github.com/jayjang0209/BankCustomerChurnPrediction",
     demo: "",
-    video: "https://youtu.be/xFMkTjfg4oc",
+    video: "https://www.youtube.com/embed/xFMkTjfg4oc",
   },
   {
     title: "PlanA",
