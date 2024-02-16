@@ -4,6 +4,10 @@
 
 - Added ZenMelody to the projects.
 
+### Fixed
+
+- Fix youtube link for ChurnPrediction.
+
 ## [1.0.2] - 2024-01-11
 
 ### Fixed
