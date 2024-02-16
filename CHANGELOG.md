@@ -1,3 +1,9 @@
+## [1.1.2] - 2024-02-16
+
+### Added
+
+- Added ZenMelody to the projects.
+
 ## [1.0.2] - 2024-01-11
 
 ### Fixed
