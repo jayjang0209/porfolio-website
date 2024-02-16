@@ -7,6 +7,7 @@ const planaImg = "/imgs/PlanA.png";
 const churnImg = "/imgs/ChurnDetector.png";
 const codeImg = "/imgs/code.jpg";
 const vikingImg = "/imgs/Viking.png";
+const ZenMelodyImg = "/imgs/zenmelody_web.png";
 
 import { FaUniversity, FaUserGraduate } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
@@ -48,6 +49,31 @@ export const ResumeLink =
 export const EmailLink = "jayjang0209@gmail.com";
 
 export const projectsData = [
+  {
+    title: "ZenMelody",
+    description:
+      "Full-stack SaaS application designed to enrich meditation practices with AI-generated music, guides",
+    tags: [
+      "React",
+      "TypeScript",
+      "MySQL",
+      "OpenAI",
+      "Prisma",
+      "Stripe",
+      "Docker",
+      "GitHub Actions",
+    ],
+    tasks: [
+      "Developed a mobile-friendly SaaS application for meditation practices using React, TypeScript, and MySQL",
+      "Implemented AI-powered services to enhance user experience and provide personalized insights leveraging OpenAI and Replicate.",
+      "Leveraged MySQL provided by PlanetScale for cloud-based data storage, ensuring scalability and reliability of data management processes",
+      "Integrated robust user authentication and authorization mechanisms using Clerk",
+    ],
+    imageUrl: ZenMelodyImg,
+    github: "https://github.com/jayjang0209/ZenMelody",
+    demo: "https://zen-melody.vercel.app/",
+    video: "",
+  },
   {
     title: "Squamish Real Estate",
     description:
